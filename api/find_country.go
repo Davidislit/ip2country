@@ -37,6 +37,7 @@ func (service *FindCountryService) findCountry(c *gin.Context) {
 	location, err := service.db.Find(ip)
 	if err != nil {
 		c.JSON(http.StatusNotFound, ResponseError{Error: "Not found ip"})
+		return
 	}
 
 	c.JSON(http.StatusOK, location)

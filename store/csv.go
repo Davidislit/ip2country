@@ -30,14 +30,8 @@ func InitCSVDatabase(path string) (*CSVDatabase, error) {
 
 	for _, record := range records {
 		if len(record) != 3 {
-			continue // Skip errors for now
-			// return nil, errors.New(fmt.Sprint("invalid row schema on row %v to many columns", index)))
+			continue
 		}
-
-		// if net.ParseIP(record[0]) == nil {
-		// return nil, errors.New(fmt.Sprint("invalid ip on row %v", index)))
-		// }
-
 		ip := record[0]
 		city := record[1]
 		country := record[2]
