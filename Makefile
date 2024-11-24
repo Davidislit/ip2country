@@ -9,7 +9,7 @@ build:
 	go build -o $(BINARY_NAME)
 
 test:
-	go test .
+	go test ./...
 
 run:
 	go run .
